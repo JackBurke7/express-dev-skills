@@ -20,11 +20,12 @@ router.delete('/:id', (req, res) => {
 
 router.get('/:id/edit', (req, res) => {
     const skillId = parseInt(req.params.id);
-    res.render('skills/edit', { skill });
+    res.render(`/skills/edit${skillId}`);
 });
 
 router.put('/:id', (req, res) => {
     const skillId = parseInt(req.params.id);
+    res.redirect(`/skills/${skillId}`);
 });    
 
 module.exports = router;

@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>    
 <h1>Edit Skill</h1>
 <form action="/skills/<%= skill.id>?_method=PUT" method="POST">
   <label for="name">Name:</label>
@@ -10,4 +15,6 @@
   <textarea name="description" id="description" required><%= skill.description %></textarea>
   <br>
   <button type="submit">Update Skill</button>
+</body>
 </form>
+</html>
