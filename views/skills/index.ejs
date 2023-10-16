@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Developer Skills</title>
+</head>
+<body>
+  <h1>List of Skills</h1>
+  <ul>
+    <% skills.forEach(skill => { %>
+      <li>
+        <a href="/skills/<%= skill.id %>"><%= skill.name %></a> - <%= skill.level %>
+        <%- include('partials/header', { pageTitle: 'List of Skills' }) %>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>
